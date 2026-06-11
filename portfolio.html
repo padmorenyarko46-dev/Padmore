@@ -301,18 +301,29 @@
     <div class="form-row"><label for="email">Email address</label><input id="email" type="email" placeholder="john@example.com"></div>
     <div class="form-row"><label for="subject">Subject</label><input id="subject" type="text" placeholder="Project enquiry"></div>
     <div class="form-row"><label for="message">Message</label><textarea id="message" placeholder="Tell me about your project or opportunity…"></textarea></div>
-    <button class="submit-btn" type="button">Send message</button>
+    <button class="submit-btn" type="button" onclick="sendEmail()">Send message</button>
   </div>
 </section>
 
-<footer>
-  <p>© 2026 Nyarko Padmore . All rights reserved.</p>
-  <div class="socials">
-    <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter / X</a>
-  </div>
-</footer>
+<script>
+  function sendEmail() {
+    const fname = document.getElementById('fname').value;
+    const lname = document.getElementById('lname').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+    if (!fname || !email || !message) {
+      alert('Please fill in at least your name, email, and message.');
+      return;
+    }
+
+    const fullName = fname + ' ' + lname;
+    const body = `Name: ${fullName}\nEmail: ${email}\n\n${message}`;
+
+    window.location.href = `mailto:YOUR_EMAIL@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+</script>
 
 </body>
 </html>
