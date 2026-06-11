@@ -274,13 +274,12 @@
     </div>
 
     <div class="project-card">
-      <div class="project-icon">⚙️</div>
-      <h3>DevOps Automation CLI</h3>
-      <p>A command-line tool that automates deployment pipelines and environment provisioning, cutting deploy times by 60%.</p>
+      <div class="project-icon">📋</div>
+      <h3>Survey Form</h3>
+      <p>A functional survey form built with clean HTML and CSS, collecting user input with validation and a clean UI.</p>
       <div class="tag-row">
-        <span class="tag">Go</span>
-        <span class="tag">Docker</span>
-        <span class="tag">GitHub Actions</span>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
       </div>
       <a href="https://padmorenyarko46-dev.github.io/Padmore/survey-form.html" class="card-link-btn" target="_blank" rel="noopener noreferrer">View project →</a>
     </div>
@@ -303,7 +302,6 @@
     <div class="form-row"><label for="message">Message</label><textarea id="message" placeholder="Tell me about your project or opportunity…"></textarea></div>
     <button class="submit-btn" type="button" onclick="sendEmail()">Send message</button>
     <p id="success-msg" style="display:none; color:green; margin-top:12px; font-size:14px;">✓ Your email app has opened with your message. Please hit send!</p>
-    <p id="success-msg" style="display:none; color:green; margin-top:12px; font-size:14px;">✓ Your email app has opened with your message. Please hit send!</p>
   </div>
 </section>
 
@@ -324,9 +322,19 @@
     const body = `Name: ${fullName}\nEmail: ${email}\n\n${message}`;
 
     window.location.href = `mailto:nyarkopadmore46@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
     document.getElementById('success-msg').style.display = 'block';
   }
 </script>
+
+<footer>
+  <p>© 2026 Nyarko Padmore. All rights reserved.</p>
+  <div class="socials">
+    <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter / X</a>
+  </div>
+</footer>
 
 </body>
 </html>
